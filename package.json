@@ -1,7 +1,7 @@
 {
-  "name": "@ticatec/uniface-app-component",
-  "version": "0.1.0",
-  "description": "uniface web app components base on the uniface web elements",
+  "name": "@ticatec/uniface-filter-panel",
+  "version": "0.0.1",
+  "description": "uniface search criteria panel base on the uniface web elements",
   "scripts": {
     "dev": "vite dev",
     "build:css": "sass ./src/lib/uniface-filter-panel.scss:./src/lib/uniface-filter-panel.css --no-source-map",
@@ -28,20 +28,20 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./uniface-app-component.css": {
-      "default": "./dist/uniface-app-component.css"
+    "./uniface-filter-panel.css": {
+      "default": "./dist/uniface-filter-panel.css"
     },
     "./AdvancedFilterPanel": {
-      "types": "./dist/filter-panel/AdvancedFilterPanel.svelte.d.ts",
-      "import": "./dist/filter-panel/AdvancedFilterPanel.svelte"
+      "types": "./dist/AdvancedFilterPanel.svelte.d.ts",
+      "import": "./dist/AdvancedFilterPanel.svelte"
     },
     "./DynamicFilterPanel": {
-      "types": "./dist/filter-panel/DynamicFilterPanel.svelte.d.ts",
-      "import": "./dist/filter-panel/DynamicFilterPanel.svelte"
+      "types": "./dist/DynamicFilterPanel.svelte.d.ts",
+      "import": "./dist/DynamicFilterPanel.svelte"
     },
     "./FilterPanel": {
-      "types": "./dist/filter-panel/FilterPanel.svelte.d.ts",
-      "import": "./dist/filter-panel/FilterPanel.svelte"
+      "types": "./dist/FilterPanel.svelte.d.ts",
+      "import": "./dist/FilterPanel.svelte"
     }
   },
   "peerDependencies": {
