@@ -1,22 +1,15 @@
 <script lang="ts">
 
-    import FilterPanel, {AdvancedFilterPanel, type MetaCriteriaField} from "$lib";
-    import FullscreenOverlay from "@ticatec/uniface-element/FullscreenOverlay";
-    import Button from "@ticatec/uniface-element/Button";
-    import CriteriaField from "@ticatec/uniface-element/CriteriaField";
-    import TextEditor from "@ticatec/uniface-element/TextEditor";
-    import DateRangeEditor from "@ticatec/uniface-element/DateRange";
+    import { type MetaCriteriaField} from "$lib";
+
     import type {ButtonActions} from "@ticatec/uniface-element/ActionBar";
-    import OptionsSelect from "@ticatec/uniface-element/OptionsSelect";
-    import NumberRange from "@ticatec/uniface-element/NumberRange";
     import DynamicFilterPanel from "$lib/DynamicFilterPanel.svelte";
 
-    let visible: boolean = false;
+
 
 
     const confirmHandler = () => {
         console.log('开始查询数据....')
-        visible = false;
     }
 
     let criteria: any = {};
@@ -79,7 +72,7 @@
             type: 'options-multi-selector',
             label: '状态',
             size: 'x40',
-            isAdvanced: true,
+            isAdvanced: false,
             attrs: {
                 field: "status"
             },

@@ -1,14 +1,14 @@
 <script lang="ts">
 
-    import type MetaCriteriaField from "$lib/filter-panel/MetaCriteriaField";
-    import FilterPanel from "./FilterPanel.svelte";
+    import type MetaCriteriaField from "./MetaCriteriaField";
     import CriteriaField from "@ticatec/uniface-element/CriteriaField";
     import AdvancedFilterPanel from "./AdvancedFilterPanel.svelte";
     import type {MouseClickHandler} from "@ticatec/uniface-element";
     import CriteriaComponents from "./components/CriteriaComponents";
-    import FullscreenOverlay from "@ticatec/uniface-element/FullscreenOverlay";
+    import FullScreenOverlay from "@ticatec/uniface-element/FullScreenOverlay";
     import UnknownTypeCriteria from "$lib/components/UnknownTypeCriteria.svelte";
     import type {ButtonActions} from "@ticatec/uniface-element/ActionBar";
+    import FilterPanel from "$lib/FilterPanel.svelte";
 
     export let criteria: any = {};
 
@@ -29,21 +29,11 @@
     export let style: string = "";
     export let advStyle: string = "";
 
-    const advancedClickHandler = () => {
-        showAdvanced = true;
-    };
-
-    let showAdvanced: boolean = false;
-
     let hasAdvanced: boolean = false;
+
 
     const getFieldComponent = (type: string) => {
         return cmpMgr.get(type) ?? UnknownTypeCriteria;
-    }
-
-    const advancedSearchClickHandler = (event: MouseEvent) => {
-        searchClickHandler?.(event);
-        showAdvanced = false;
     }
 
 
@@ -61,7 +51,7 @@
 
 </script>
 
-<FilterPanel {style} {resetClickHandler} {searchClickHandler} {actions} advancedClickHandler={hasAdvanced ? advancedClickHandler : null}>
+<FilterPanel {style} {resetClickHandler} {searchClickHandler} {actions} {advancedCriteriaTitle} {advStyle} {hasAdvanced}>
     {#each list as field}
         {#if !field.isAdvanced}
             <CriteriaField label={field.label} size={field.size}>
@@ -69,16 +59,13 @@
             </CriteriaField>
         {/if}
     {/each}
-</FilterPanel>
-{#if showAdvanced}
-    <FullscreenOverlay bind:visible={showAdvanced}>
-        <AdvancedFilterPanel style={advStyle} closeHandler={()=>{showAdvanced = false}}
-                             confirmHandler={advancedSearchClickHandler} title={advancedCriteriaTitle}>
+    <svelte:fragment slot="advanced-panel">
+        {#if hasAdvanced}
             {#each list as field}
                 <CriteriaField label={field.label} size={field.size}>
                     <svelte:component this={field.component} {...field.attrs} props={field.props} {criteria} {variant}/>
                 </CriteriaField>
             {/each}
-        </AdvancedFilterPanel>
-    </FullscreenOverlay>
-{/if}
+        {/if}
+    </svelte:fragment>
+</FilterPanel>

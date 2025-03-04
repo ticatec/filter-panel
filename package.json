@@ -1,6 +1,6 @@
 {
   "name": "@ticatec/uniface-filter-panel",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "uniface search criteria panel base on the uniface web elements",
   "scripts": {
     "dev": "vite dev",
@@ -31,10 +31,6 @@
     "./uniface-filter-panel.css": {
       "default": "./dist/uniface-filter-panel.css"
     },
-    "./AdvancedFilterPanel": {
-      "types": "./dist/AdvancedFilterPanel.svelte.d.ts",
-      "import": "./dist/AdvancedFilterPanel.svelte"
-    },
     "./DynamicFilterPanel": {
       "types": "./dist/DynamicFilterPanel.svelte.d.ts",
       "import": "./dist/DynamicFilterPanel.svelte"
@@ -42,6 +38,10 @@
     "./FilterPanel": {
       "types": "./dist/FilterPanel.svelte.d.ts",
       "import": "./dist/FilterPanel.svelte"
+    },
+    "./CriteriaComponents": {
+      "types": "./dist/components/CriteriaComponents.d.ts",
+      "import": "./dist/components/CriteriaComponents.js"
     }
   },
   "peerDependencies": {
@@ -53,7 +53,7 @@
     "@sveltejs/package": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
     "@ticatec/uniface-dev-shell": "^0.0.2",
-    "@ticatec/uniface-element": "^0.1.11",
+    "@ticatec/uniface-element": "^0.1.12",
     "@ticatec/uniface-icons": "^0.2.0",
     "dayjs": "^1.11.10",
     "dotenv": "^16.4.7",

@@ -1,8 +1,6 @@
 <script lang="ts">
 
-    import FilterPanel, {AdvancedFilterPanel} from "$lib";
-    import FullscreenOverlay from "@ticatec/uniface-element/FullscreenOverlay";
-    import Button from "@ticatec/uniface-element/Button";
+    import FilterPanel from "$lib/FilterPanel.svelte";
     import CriteriaField from "@ticatec/uniface-element/CriteriaField";
     import TextEditor from "@ticatec/uniface-element/TextEditor";
     import DateRangeEditor from "@ticatec/uniface-element/DateRange";
@@ -49,7 +47,7 @@
 </script>
 
 <div style="width: 100%; padding: 12px; box-sizing: border-box; background-color: #F8FAFC">
-    <FilterPanel resetClickHandler={()=>{}} searchClickHandler={()=>{visible=true}} advancedClickHandler={()=>{visible=true}} actions={panelActions}>
+    <FilterPanel resetClickHandler={()=>{}} searchClickHandler={()=>{visible=true}} actions={panelActions}>
         <CriteriaField label="姓名" size="x20">
             <TextEditor bind:value={criteria.name} variant="outlined"/>
         </CriteriaField>
@@ -68,30 +66,27 @@
         <CriteriaField label="姓名" size="x20">
             <TextEditor bind:value={criteria.name} variant="outlined"/>
         </CriteriaField>
+        <svelte:fragment slot="advanced-panel">
+            <CriteriaField label="姓名" size="x20">
+                <TextEditor bind:value={criteria.name} variant="outlined"/>
+            </CriteriaField>
+            <CriteriaField label="性别" size="x20">
+                <TextEditor bind:value={criteria.name} variant="outlined"/>
+            </CriteriaField>
+            <CriteriaField label="入园日期" size="x25">
+                <DateRangeEditor bind:fromValue={criteria.from} bind:toValue={criteria.to} variant="outlined"/>
+            </CriteriaField>
+            <CriteriaField label="姓名" size="x40">
+                <TextEditor bind:value={criteria.name} variant="outlined"/>
+            </CriteriaField>
+            <CriteriaField label="姓名" size="x20">
+                <TextEditor bind:value={criteria.name} variant="outlined"/>
+            </CriteriaField>
+            <CriteriaField label="姓名" size="x20">
+                <TextEditor bind:value={criteria.name} variant="outlined"/>
+            </CriteriaField>
+        </svelte:fragment>
 
     </FilterPanel>
 </div>
-
-<FullscreenOverlay bind:visible>
-    <AdvancedFilterPanel title="更多" closeHandler={()=>{visible=false}} {confirmHandler}>
-        <CriteriaField label="姓名" size="x20">
-            <TextEditor bind:value={criteria.name} variant="outlined"/>
-        </CriteriaField>
-        <CriteriaField label="性别" size="x20">
-            <TextEditor bind:value={criteria.name} variant="outlined"/>
-        </CriteriaField>
-        <CriteriaField label="入园日期" size="x25">
-            <DateRangeEditor bind:fromValue={criteria.from} bind:toValue={criteria.to} variant="outlined"/>
-        </CriteriaField>
-        <CriteriaField label="姓名" size="x40">
-            <TextEditor bind:value={criteria.name} variant="outlined"/>
-        </CriteriaField>
-        <CriteriaField label="姓名" size="x20">
-            <TextEditor bind:value={criteria.name} variant="outlined"/>
-        </CriteriaField>
-        <CriteriaField label="姓名" size="x20">
-            <TextEditor bind:value={criteria.name} variant="outlined"/>
-        </CriteriaField>
-    </AdvancedFilterPanel>
-</FullscreenOverlay>
 
