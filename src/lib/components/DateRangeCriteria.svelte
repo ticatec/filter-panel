@@ -1,6 +1,7 @@
 <script lang="ts">
 
     import DateRange from "@ticatec/uniface-element/DateRange";
+    import utils from "$lib/utils";
 
     export let criteria;
     /**
@@ -11,6 +12,7 @@
      * 结束日期
      */
     export let toField: string;
+    export let props: any;
 
     export let variant: 'outlined' | 'filled';
 

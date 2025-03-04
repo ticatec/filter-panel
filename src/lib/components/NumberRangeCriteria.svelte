@@ -1,6 +1,7 @@
 <script lang="ts">
 
     import NumberRange from "@ticatec/uniface-element/NumberRange";
+    import utils from "$lib/utils";
 
     export let criteria;
     /**
@@ -13,7 +14,9 @@
     export let maxField: string;
     export let variant: 'outlined' | 'filled';
 
-    const acceptAttrs = ['style', 'min', 'max'];
+    export let props: any;
+
+    const acceptAttrs = ['style', 'min', 'max', 'allowNegative'];
 
     let attrs:any = {};
 
@@ -22,4 +25,4 @@
 
 </script>
 
-<NumberRange bind:fromValue={criteria[minField]} bind:toValue={criteria[maxField]} {variant}/>
+<NumberRange bind:fromValue={criteria[minField]} bind:toValue={criteria[maxField]} {variant} {...attrs}/>

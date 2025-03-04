@@ -9,7 +9,7 @@
 
     export let props: any;
 
-    const acceptAttrs = ['menu$height', 'style', 'options', 'keyField', 'textField', 'placeholder', 'emptyText'];
+    const acceptAttrs = ['menu$height', 'style', 'options', 'keyField', 'textField', 'emptyText'];
 
     let attrs:any = {};
 

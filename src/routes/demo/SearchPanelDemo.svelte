@@ -8,11 +8,10 @@
     import OptionsSelect from "@ticatec/uniface-element/OptionsSelect";
     import NumberRange from "@ticatec/uniface-element/NumberRange";
 
-    let visible: boolean = false;
 
-    const confirmHandler = () => {
+
+    const doSearch = () => {
         console.log('开始查询数据....')
-        visible = false;
     }
 
     let criteria:any = {};
@@ -47,7 +46,7 @@
 </script>
 
 <div style="width: 100%; padding: 12px; box-sizing: border-box; background-color: #F8FAFC">
-    <FilterPanel resetClickHandler={()=>{}} searchClickHandler={()=>{visible=true}} actions={panelActions}>
+    <FilterPanel resetClickHandler={()=>{}} searchClickHandler={doSearch} actions={panelActions}>
         <CriteriaField label="姓名" size="x20">
             <TextEditor bind:value={criteria.name} variant="outlined"/>
         </CriteriaField>

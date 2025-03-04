@@ -21,4 +21,4 @@
 
 </script>
 
-<TextEditor bind:value={criteria[field]} removable input$placeholder={placeholder} {variant}/>
+<TextEditor bind:value={criteria[field]} removable input$placeholder={placeholder} {variant} {...attrs}/>

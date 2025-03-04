@@ -2,10 +2,8 @@
 
     import type MetaCriteriaField from "./MetaCriteriaField";
     import CriteriaField from "@ticatec/uniface-element/CriteriaField";
-    import AdvancedFilterPanel from "./AdvancedFilterPanel.svelte";
     import type {MouseClickHandler} from "@ticatec/uniface-element";
     import CriteriaComponents from "./components/CriteriaComponents";
-    import FullScreenOverlay from "@ticatec/uniface-element/FullScreenOverlay";
     import UnknownTypeCriteria from "$lib/components/UnknownTypeCriteria.svelte";
     import type {ButtonActions} from "@ticatec/uniface-element/ActionBar";
     import FilterPanel from "$lib/FilterPanel.svelte";
