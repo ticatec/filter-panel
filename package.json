@@ -1,6 +1,6 @@
 {
   "name": "@ticatec/uniface-filter-panel",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "uniface search criteria panel base on the uniface web elements",
   "scripts": {
     "dev": "vite dev",
