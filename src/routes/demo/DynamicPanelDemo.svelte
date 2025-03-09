@@ -5,9 +5,6 @@
     import type {ButtonActions} from "@ticatec/uniface-element/ActionBar";
     import DynamicFilterPanel from "$lib/DynamicFilterPanel.svelte";
 
-
-
-
     const confirmHandler = () => {
         console.log('开始查询数据....')
     }

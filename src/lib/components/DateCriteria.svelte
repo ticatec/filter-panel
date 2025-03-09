@@ -1,13 +1,14 @@
 <script lang="ts">
 
     import DatePicker from "@ticatec/uniface-element/DatePicker";
+    import utils from "$lib/utils";
 
     export let criteria;
     /**
      * 日期字段名
      */
     export let field: string;
-
+    export let props: any;
 
     export let variant: 'outlined' | 'filled';
 

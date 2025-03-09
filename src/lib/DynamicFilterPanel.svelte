@@ -61,7 +61,7 @@
         {#if hasAdvanced}
             {#each list as field}
                 <CriteriaField label={field.label} size={field.size}>
-                    <svelte:component this={field.component} {...field.attrs} props={field.props} {criteria} {variant}/>
+                    <svelte:component this={field.component} {...field.attrs} props={field.props} bind:criteria {variant}/>
                 </CriteriaField>
             {/each}
         {/if}
