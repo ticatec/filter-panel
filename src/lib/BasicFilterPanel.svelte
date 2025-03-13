@@ -2,7 +2,7 @@
 
     import {TextButton} from "@ticatec/uniface-element/Button";
     import type {MouseClickHandler} from "@ticatec/uniface-element";
-    import i18n from "@ticatec/uniface-element/I18nContext";
+    import i18n from "@ticatec/i18n";
     import type {ButtonAction, ButtonActions} from "@ticatec/uniface-element/ActionBar";
     import ActionBar from "@ticatec/uniface-element/ActionBar";
 
@@ -55,7 +55,7 @@
     <div class="panel-footer">
         {#if advancedClickHandler}
             <div style="flex: 1 1 auto">
-                <TextButton type="primary" label={i18n.getText('uniface.filter_panel.btnMoreCriteria', 'More Criteria')}
+                <TextButton type="primary" label={i18n.getText('uniface.filter_panel.btnMoreCriteria', 'Advanced criteria')}
                             onClick={advancedClickHandler}/>
             </div>
         {/if}

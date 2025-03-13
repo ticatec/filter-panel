@@ -3,7 +3,7 @@
     import Button from "@ticatec/uniface-element/Button";
     import Icon from "@ticatec/uniface-element/Icon";
     import { fly } from "svelte/transition";
-    import i18n from "@ticatec/uniface-element/I18nContext";
+    import i18n from "@ticatec/i18n";
 
     export let title: string = "More";
 
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="panel-footer">
-            <Button type="default" label={i18n.getText('uniface.filter_panel.btnCancel', 'Cancel')} onClick={closeHandler}/>
+            <Button type="default" label={i18n.getText('uniface.btnCancel', 'Cancel')} onClick={closeHandler}/>
             <Button type="primary" label={i18n.getText('uniface.filter_panel.btnSearch', 'Search')} onClick={confirmHandler}/>
         </div>
     </div>
