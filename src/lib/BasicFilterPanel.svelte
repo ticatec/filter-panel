@@ -5,6 +5,7 @@
     import i18n from "@ticatec/i18n";
     import type {ButtonAction, ButtonActions} from "@ticatec/uniface-element/ActionBar";
     import ActionBar from "@ticatec/uniface-element/ActionBar";
+    import langRes from "$lib/i18n_resources/en_res";
 
     export let style: string = "";
     /**
@@ -28,14 +29,14 @@
     let panelActions: ButtonActions = [];
 
     let resetAction: ButtonAction = {
-        label: i18n.getText('uniface.filter_panel.btnReset', 'Reset'),
+        label: i18n.getText('uniface.filter_panel.btnReset', langRes.uniface.filter_panel.btnReset),
         type: 'default',
         handler: resetClickHandler
     }
 
     let searchAction: ButtonAction = {
         type: "primary",
-        label: i18n.getText('uniface.filter_panel.btnSearch', 'Search'),
+        label: i18n.getText('uniface.filter_panel.btnSearch', langRes.uniface.filter_panel.btnSearch),
         handler: searchClickHandler
     }
 
@@ -55,7 +56,7 @@
     <div class="panel-footer">
         {#if advancedClickHandler}
             <div style="flex: 1 1 auto">
-                <TextButton type="primary" label={i18n.getText('uniface.filter_panel.btnMoreCriteria', 'Advanced criteria')}
+                <TextButton type="primary" label={i18n.getText('uniface.filter_panel.btnMoreCriteria', langRes.uniface.filter_panel.btnMoreCriteria)}
                             onClick={advancedClickHandler}/>
             </div>
         {/if}
