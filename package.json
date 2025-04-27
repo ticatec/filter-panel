@@ -1,6 +1,6 @@
 {
   "name": "@ticatec/uniface-filter-panel",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "uniface search criteria panel base on the uniface web elements",
   "scripts": {
     "dev": "vite dev",
@@ -57,9 +57,9 @@
     "@sveltejs/package": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
     "@ticatec/uniface-dev-shell": "^0.0.2",
-    "@ticatec/uniface-element": "^0.1.21",
-    "@ticatec/uniface-icons": "^0.2.0",
-    "@ticatec/i18n": "^0.0.5",
+    "@ticatec/uniface-element": "^0.1.41",
+    "@ticatec/uniface-google-material-icons": "^0.1.2",
+    "@ticatec/i18n": "^0.0.6",
     "dayjs": "^1.11.10",
     "dotenv": "^16.4.7",
     "publint": "^0.3.2",
