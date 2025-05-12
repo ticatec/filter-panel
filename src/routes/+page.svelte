@@ -1,7 +1,6 @@
 <script lang="ts">
 
     import "@ticatec/uniface-element/ticatec-uniface-web.css"
-    import "@ticatec/uniface-icons/feather-style.css"
     import "$lib/uniface-filter-panel.css"
     import "./app.css";
     import {onMount} from "svelte";
